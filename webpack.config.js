@@ -11,9 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        use: [{ loader: "ts-loader" }]
       },
       {
         test: /\.css$/,
@@ -21,5 +19,5 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ["*", ".ts", ".tsx"] }
+  resolve: { extensions: ["*", ".ts", ".tsx", ".js"] }
 }
