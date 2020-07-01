@@ -41,7 +41,6 @@ class Home extends React.Component<prop, state> {
   }
 
   valueChange = (event: React.ChangeEvent<{}>, value: string) => {
-    console.log(value);
     this.setState({ value });
   }
 

@@ -53,12 +53,14 @@ class AppBarGensyo extends React.Component<Props, State> {
             </Toolbar>
           </AppBar>
         </div>
+
         <Drawer open={this.state.open} onClose={() => this.toggleDrawer(false)}>
           <List className={this.props.classes.list}>
             <ListItem button onClick={() => { this.toggleDrawer(false); this.routePush('/') }}>
               <Home />
               <ListItemText primary="ホーム" className={this.props.classes.linkList} />
             </ListItem>
+
             <ListItem button onClick={() => { this.toggleDrawer(false); this.routePush('download') }}>
               <CloudDownload />
               <ListItemText className={this.props.classes.linkList} primary="配布物" />
