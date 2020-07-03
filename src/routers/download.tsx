@@ -1,25 +1,32 @@
 import * as React from 'react';
-import { Card, CardContent, Container, Typography, } from '@material-ui/core';
+import { Card, CardContent, Container, Typography, Button } from '@material-ui/core';
 import { createStyles } from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 
 const styles = () => createStyles({
-  top: {
-    marginTop: '1vh',
+  div: {
     textAlign: 'center',
-    paddingBottom: '3vh',
-    width: '70%',
+    paddingTop: '3%',
+    paddingBottom: '3%',
   },
 
-  card: {
-    marginTop: '1vh',
+  cardTop: {
+    marginTop: '10vh',
+    textAlign: 'center',
   },
 
   image: {
-    borderRadius: '50%',
-    width: '80px',
-    height: '80px'
-  }
+    height: "30vh",
+  },
+
+  top: {
+    marginTop: '1vh',
+    textAlign: 'center',
+  },
+
+  button:{
+    marginTop:"3%",
+  },
 });
 
 interface prop extends WithStyles<typeof styles> { }
@@ -28,12 +35,19 @@ interface state { }
 class Download extends React.Component<prop, state> {
   render() {
     return (
-      <Container className={this.props.classes.top}>
-        <Card className={this.props.classes.card} variant="outlined">
+      <Container className={this.props.classes.div} >
+        <Card className={this.props.classes.cardTop} variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               VerticalSideGame
           </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              ランダムに表示される矢印の方向に向くだけのゲーム
+          </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              マインクラフトの配布ワールドです
+          </Typography>
+            <Button variant="contained" href="../../upload/VerticalSideGame.zip" className={this.props.classes.button}>ダウンロード</Button>
           </CardContent>
         </Card>
       </Container>

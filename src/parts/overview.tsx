@@ -3,7 +3,6 @@ import { Card, CardContent, Typography, Container, Button } from '@material-ui/c
 import { createStyles } from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import { YouTube } from '@material-ui/icons';
-import { typography } from 'material-ui/styles';
 
 const styles = () => createStyles({
   top: {

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Card, CardMedia, CardContent, Typography, Container, BottomNavigation, BottomNavigationAction, } from '@material-ui/core';
-import { createStyles } from '@material-ui/core/styles';
-import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
+import { createStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import withStyles, { WithStyles, } from '@material-ui/core/styles/withStyles';
 import { Assessment, AccountBox } from '@material-ui/icons';
-
+import theme from '../color/theme';
 import Overview from '../parts/overview';
-import Memver from '../parts/memver';
 import Member from '../parts/memver';
 
 const styles = () => createStyles({
@@ -22,13 +21,13 @@ const styles = () => createStyles({
     height: "30vh",
   },
 
-  top:{
+  top: {
     marginTop: '1vh',
     textAlign: 'center',
   },
 
   icno: {
-    color:"#ff80ab",
+    color: "#ff80ab",
   }
 });
 
@@ -45,17 +44,17 @@ class Home extends React.Component<prop, state> {
     super(props);
     this.state = {
       value: "Overview",
-      view:<Overview/>,
+      view: <Overview />,
     }
   }
 
   valueChange = (event: React.ChangeEvent<{}>, value: string) => {
     if (value === "Overview") {
-      this.setState({view:<Overview/>});
-    }else{
-      this.setState({view:<Member/>});
+      this.setState({ view: <Overview /> });
+    } else {
+      this.setState({ view: <Member /> });
     }
-    this.setState({value});
+    this.setState({ value });
   }
 
   render() {
@@ -77,14 +76,14 @@ class Home extends React.Component<prop, state> {
             </CardContent>
           </Card>
         </Container>
-
-        <Container className={this.props.classes.top}>
-          <BottomNavigation value={this.state.value} onChange={this.valueChange}>
-            <BottomNavigationAction label="概要" value="Overview" showLabel={true} icon={<Assessment fontSize='large' />} />
-            <BottomNavigationAction label="メンバー" value="Member" showLabel={true} icon={<AccountBox fontSize='large' />}/>
-          </BottomNavigation>
-        </Container>
-
+        <ThemeProvider theme={theme}>
+          <Container className={this.props.classes.top}>
+            <BottomNavigation value={this.state.value} onChange={this.valueChange}>
+              <BottomNavigationAction label="概要" value="Overview" showLabel={true} icon={<Assessment fontSize='large' />} />
+              <BottomNavigationAction label="メンバー" value="Member" showLabel={true} icon={<AccountBox fontSize='large' />} />
+            </BottomNavigation>
+          </Container>
+        </ThemeProvider>
         {this.state.view}
       </div>
     )

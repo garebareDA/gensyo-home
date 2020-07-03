@@ -20,7 +20,7 @@ class App extends React.Component<Props> {
         <AppBar/>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='download' exact component={Download}/>
+          <Route path='/download' exact component={Download}/>
         </Switch>
       </Paper>
     );
