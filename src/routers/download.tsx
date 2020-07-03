@@ -50,7 +50,7 @@ class Download extends React.Component<prop, state> {
               <Typography variant="body2" color="textSecondary" component="p">
                 マインクラフトの配布ワールドです
           </Typography>
-              <Button color='primary' variant="contained" href="../../upload/VerticalSideGame.zip" className={this.props.classes.button}>ダウンロード</Button>
+              <Button color='primary' variant="contained" href={ window.location.href + "/upload/VerticalSideGame.zip"} className={this.props.classes.button}>ダウンロード</Button>
             </CardContent>
           </Card>
         </Container>
