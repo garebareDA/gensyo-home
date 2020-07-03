@@ -3,15 +3,15 @@ import * as ReactDOM from 'react-dom';
 import App from './app';
 
 import {
-  BrowserRouter,
+  HashRouter,
 } from 'react-router-dom';
 
 const app = document.getElementById('app');
 ReactDOM.render(
   <div>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </div>,
   app
 );
