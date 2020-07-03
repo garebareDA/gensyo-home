@@ -3,6 +3,7 @@ import { Card, CardContent, Container, Typography, Button } from '@material-ui/c
 import { createStyles, ThemeProvider } from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import theme from '../color/theme'
+import slideGame from '../../upload/VerticalSideGame.zip';
 
 const styles = () => createStyles({
   div: {
@@ -50,7 +51,7 @@ class Download extends React.Component<prop, state> {
               <Typography variant="body2" color="textSecondary" component="p">
                 マインクラフトの配布ワールドです
           </Typography>
-              <Button color='primary' variant="contained" href="../../upload/VerticalSideGame.zip" className={this.props.classes.button}>ダウンロード</Button>
+              <Button color='primary' variant="contained" href={slideGame} className={this.props.classes.button}>ダウンロード</Button>
             </CardContent>
           </Card>
         </Container>
