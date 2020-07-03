@@ -64,7 +64,7 @@ class Home extends React.Component<prop, state> {
           <Card className={this.props.classes.cardTop} variant="outlined">
             <CardMedia
               className={this.props.classes.image}
-              image="../../images/gensyologo.png"
+              image="/images/gensyologo.png"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">

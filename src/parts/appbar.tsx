@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps, } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+import { createStyles,} from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import { Menu, Home, CloudDownload } from '@material-ui/icons';
 
