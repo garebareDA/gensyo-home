@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps, } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
-import { createStyles } from '@material-ui/core/styles';
+import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import { Menu, Home, CloudDownload } from '@material-ui/icons';
 
@@ -16,6 +16,14 @@ const styles = () => createStyles({
 
   title: {
     textAlign: 'right'
+  },
+
+  icon:{
+    color:"#eceff1"
+  },
+
+  appbar: {
+    backgroundColor:"#1e88e5"
   }
 });
 
@@ -44,10 +52,10 @@ class AppBarGensyo extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <AppBar color={"primary"}>
+        <AppBar className={this.props.classes.appbar}>
           <Toolbar>
             <IconButton onClick={() => this.toggleDrawer(true)}>
-              <Menu />
+              <Menu className={this.props.classes.icon}/>
             </IconButton>
           </Toolbar>
         </AppBar>
