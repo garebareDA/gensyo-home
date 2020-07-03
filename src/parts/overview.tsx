@@ -3,6 +3,7 @@ import { Card, CardContent, Typography, Container, Button } from '@material-ui/c
 import { createStyles } from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
 import { YouTube } from '@material-ui/icons';
+import { typography } from 'material-ui/styles';
 
 const styles = () => createStyles({
   top: {
@@ -17,6 +18,14 @@ const styles = () => createStyles({
 
   icon: {
     marginTop: '5%',
+  },
+
+  typography: {
+    textDecoration:"underline"
+  },
+
+  title: {
+    marginBottom: '5vh'
   }
 });
 
@@ -26,14 +35,14 @@ interface prop extends WithStyles<typeof styles> { }
 class OverView extends React.Component<prop> {
   render() {
     const openYoutube = () => {
-      
+      window.location.replace("https://www.youtube.com/channel/UCcViiRZ4eJwPOe9BKeFfAGQ/");
     }
 
     return (
       <Container className={this.props.classes.top}>
         <Card className={this.props.classes.card} variant="outlined">
           <CardContent>
-            <Typography variant="h5" component="p">
+            <Typography variant="h5" component="p" className={this.props.classes.title}>
               Youtubeで実況などしております
           </Typography>
             <Typography color="textSecondary" component="p">
@@ -49,9 +58,9 @@ class OverView extends React.Component<prop> {
               Youtubeチャンネルを作り、ホームページを作りグループになりました。
           </Typography>
             <div className={this.props.classes.icon}>
-              <Button>
+              <Button onClick={openYoutube}>
                 <YouTube fontSize="large" />
-                <Typography component="p">
+                <Typography component="p" className={this.props.classes.typography}>
                   Youtubeチャンネル
               </Typography>
               </Button>

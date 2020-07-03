@@ -8,7 +8,7 @@ const styles = () => createStyles({
     marginTop: '1vh',
     textAlign: 'center',
     paddingBottom: '3vh',
-    width:'50%',
+    width:'70%',
   },
 
   card: {
