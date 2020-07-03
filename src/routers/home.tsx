@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Card, CardMedia, CardContent, Typography, Container, BottomNavigation, BottomNavigationAction, } from '@material-ui/core';
-import { createStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createStyles, ThemeProvider } from '@material-ui/core/styles';
 import withStyles, { WithStyles, } from '@material-ui/core/styles/withStyles';
 import { Assessment, AccountBox } from '@material-ui/icons';
 import theme from '../color/theme';
 import Overview from '../parts/overview';
 import Member from '../parts/memver';
+import logo from '../../images/gensyologo.png';
 
 const styles = () => createStyles({
   div: {
@@ -64,7 +65,7 @@ class Home extends React.Component<prop, state> {
           <Card className={this.props.classes.cardTop} variant="outlined">
             <CardMedia
               className={this.props.classes.image}
-              image="/images/gensyologo.png"
+              image={logo}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
