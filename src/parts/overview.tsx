@@ -21,11 +21,16 @@ const styles = () => createStyles({
   },
 
   typography: {
-    textDecoration:"underline"
+    textDecoration:"underline",
+    color:"#d50000",
   },
 
   title: {
     marginBottom: '5vh'
+  },
+
+  youtube: {
+    color:"#d50000",
   }
 });
 
@@ -59,10 +64,10 @@ class OverView extends React.Component<prop> {
           </Typography>
             <div className={this.props.classes.icon}>
               <Button onClick={openYoutube}>
-                <YouTube fontSize="large" />
+                <YouTube fontSize="large" className={this.props.classes.youtube}/>
                 <Typography component="p" className={this.props.classes.typography}>
                   Youtubeチャンネル
-              </Typography>
+                </Typography>
               </Button>
             </div>
           </CardContent>

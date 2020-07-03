@@ -25,6 +25,10 @@ const styles = () => createStyles({
   top:{
     marginTop: '1vh',
     textAlign: 'center',
+  },
+
+  icno: {
+    color:"#ff80ab",
   }
 });
 
@@ -76,8 +80,8 @@ class Home extends React.Component<prop, state> {
 
         <Container className={this.props.classes.top}>
           <BottomNavigation value={this.state.value} onChange={this.valueChange}>
-            <BottomNavigationAction label="概要" value="Overview" showLabel={true} icon={<Assessment fontSize='large'/>}/>
-            <BottomNavigationAction label="メンバー" value="Member" showLabel={true} icon={<AccountBox fontSize='large'/>}/>
+            <BottomNavigationAction label="概要" value="Overview" showLabel={true} icon={<Assessment fontSize='large' />} />
+            <BottomNavigationAction label="メンバー" value="Member" showLabel={true} icon={<AccountBox fontSize='large' />}/>
           </BottomNavigation>
         </Container>
 

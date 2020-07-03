@@ -24,7 +24,7 @@ const styles = () => createStyles({
 
   appbar: {
     backgroundColor:"#1e88e5"
-  }
+  },
 });
 
 interface Props extends RouteComponentProps, WithStyles<typeof styles> { }

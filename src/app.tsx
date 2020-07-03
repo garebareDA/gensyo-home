@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Home from './routers/home';
 import AppBar from './parts/appbar';
+import Download from './routers/download';
 import {Paper} from '@material-ui/core';
 
 import {
@@ -19,7 +20,7 @@ class App extends React.Component<Props> {
         <AppBar/>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='download' />
+          <Route path='download' exact component={Download}/>
         </Switch>
       </Paper>
     );
