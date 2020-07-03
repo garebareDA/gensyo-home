@@ -11,15 +11,21 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-         use: [{ loader: "ts-loader" }]
+        use: [{ loader: "ts-loader" }]
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
       {
-        test:/\.(png|jpg|)$/,
-        use:[{loader:"url-loader"}]
+        test: /\.(png|jpg|)$/,
+        use: [{ loader: "url-loader" }]
+      },
+      {
+        test: /\.zip$/, loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
       }
     ]
   },
