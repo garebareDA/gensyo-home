@@ -50,7 +50,7 @@ class OverView extends React.Component<prop> {
               Youtubeで実況などしております
           </Typography>
             <Typography color="textSecondary" component="p">
-              あのトトロいるもんの名言で有名なRouru（ロウル）さんが
+              あのトトロいたもんの名言で有名なRouru（ロウル）さんが
           </Typography>
             <Typography color="textSecondary" component="p">
               Discordでサーバーを作ったところからノリで
