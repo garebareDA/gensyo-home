@@ -22,7 +22,7 @@ module.exports = {
         use: [{ loader: "url-loader" }]
       },
       {
-        test: /\.zip$/, loader: 'file-loader',
+        test: /\.(zip|wav)$/, loader: 'file-loader',
         options: {
           name: '[path][name].[ext]'
         }
