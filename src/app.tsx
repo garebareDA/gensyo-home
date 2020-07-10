@@ -2,6 +2,7 @@ import * as React from 'react';
 import Home from './routers/home';
 import AppBar from './parts/appbar';
 import Download from './routers/download';
+import Podcast from './routers/podcast';
 import {Paper} from '@material-ui/core';
 
 import {
@@ -21,6 +22,7 @@ class App extends React.Component<Props> {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/download' exact component={Download}/>
+          <Route path='/podcast' exact component={Podcast}/>
         </Switch>
       </Paper>
     );
