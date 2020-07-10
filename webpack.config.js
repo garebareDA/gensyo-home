@@ -18,11 +18,11 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(png|jpg|)$/,
+        test: /\.(png|jpg)$/,
         use: [{ loader: "url-loader" }]
       },
       {
-        test: /\.zip$/, loader: 'file-loader',
+        test: /\.(zip|mp3|gif)$/, loader: 'file-loader',
         options: {
           name: '[path][name].[ext]'
         }

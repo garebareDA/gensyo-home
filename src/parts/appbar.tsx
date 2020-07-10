@@ -3,7 +3,7 @@ import { withRouter, RouteComponentProps, } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
 import { createStyles,} from '@material-ui/core/styles';
 import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
-import { Menu, Home, CloudDownload } from '@material-ui/icons';
+import { Menu, Home, CloudDownload, MusicNote } from '@material-ui/icons';
 
 const styles = () => createStyles({
   list: {
@@ -70,6 +70,11 @@ class AppBarGensyo extends React.Component<Props, State> {
             <ListItem button onClick={() => { this.toggleDrawer(false); this.routePush('download') }}>
               <CloudDownload />
               <ListItemText className={this.props.classes.linkList} primary="配布物" />
+            </ListItem>
+
+            <ListItem button onClick={() => { this.toggleDrawer(false); this.routePush('podcast') }}>
+              <MusicNote />
+              <ListItemText className={this.props.classes.linkList} primary="ポッドキャスト" />
             </ListItem>
           </List>
         </Drawer>
